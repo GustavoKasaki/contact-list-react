@@ -1,10 +1,10 @@
-import { Header } from './styles'
+import { AddButton, Header, HeaderTitle } from './styles'
 
 const HeaderContainer = () => {
   return (
     <Header>
-      <h1>Contact List</h1>
-      <button type="button">New contact</button>
+      <HeaderTitle>Contact List</HeaderTitle>
+      <AddButton>+ Add new contact</AddButton>
     </Header>
   )
 }

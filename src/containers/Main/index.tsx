@@ -1,29 +1,44 @@
+import { ContactList, Counter, MainContainer } from './styles'
+
 const Main = () => {
   return (
-    <div>
-      <ul>
+    <MainContainer>
+      <Counter>
+        <p>6 contacts</p>
+      </Counter>
+      <ContactList>
         <li>
-          <h2>Gustavo Kasaki</h2>
+          <h3>Gustavo Kasaki</h3>
           <p>1999749-6670</p>
           <p>gmkasaki@gmail.com</p>
         </li>
         <li>
-          <h2>Gustavo Kasaki</h2>
+          <h3>Gustavo Kasaki</h3>
           <p>1999749-6670</p>
           <p>gmkasaki@gmail.com</p>
         </li>
         <li>
-          <h2>Gustavo Kasaki</h2>
+          <h3>Gustavo Kasaki</h3>
           <p>1999749-6670</p>
           <p>gmkasaki@gmail.com</p>
         </li>
         <li>
-          <h2>Gustavo Kasaki</h2>
+          <h3>Gustavo Kasaki</h3>
           <p>1999749-6670</p>
           <p>gmkasaki@gmail.com</p>
         </li>
-      </ul>
-    </div>
+        <li>
+          <h3>Gustavo Kasaki</h3>
+          <p>1999749-6670</p>
+          <p>gmkasaki@gmail.com</p>
+        </li>
+        <li>
+          <h3>Gustavo Kasaki</h3>
+          <p>1999749-6670</p>
+          <p>gmkasaki@gmail.com</p>
+        </li>
+      </ContactList>
+    </MainContainer>
   )
 }
 
