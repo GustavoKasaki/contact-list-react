@@ -1,10 +1,15 @@
-import GlobalStyle from './styles'
+import HeaderContainer from './containers/Header'
+import Main from './containers/Main'
+import GlobalStyle, { Container } from './styles'
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <h1>Hello world</h1>
+      <Container>
+        <HeaderContainer />
+        <Main />
+      </Container>
     </>
   )
 }

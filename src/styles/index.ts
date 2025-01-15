@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -9,6 +9,11 @@ const GlobalStyle = createGlobalStyle`
     list-style: none;
     text-decoration: none;
   }
+`
+export const Container = styled.div`
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%¨;
 `
 
 export default GlobalStyle
