@@ -16,6 +16,8 @@ export const Counter = styled.h2`
   width: 200px;
   height: 48px;
   margin: 0 auto;
+  border: 1px solid #000;
+  border-radius: 8px;
 
   p {
     font-size: 24px;
