@@ -28,6 +28,7 @@ export const AddButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: #3a6ea5;
+    filter: brightness(1.5);
+    transition: filter 0.25s linear;
   }
 `

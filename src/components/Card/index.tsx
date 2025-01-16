@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 import { useDispatch } from 'react-redux'
 
 import { Contact, updateContact } from '../../store/reducers/contactSlice'
@@ -11,21 +11,29 @@ import {
   Buttons,
   CancelBtn,
   Card,
+  CardEdit,
   ConfirmBtn,
   EditBtn,
   Email,
+  EmailInput,
   Info,
   Name,
-  Phone
+  NameInput,
+  Phone,
+  PhoneInput
 } from './styles'
 
-const ContactCard = ({ contact }: { contact: any }) => {
+interface ContactCardProps {
+  contact: Contact
+}
+
+const ContactCard: React.FC<ContactCardProps> = ({ contact }) => {
   const [isEditing, setIsEditing] = useState(false)
   const [editableContact, setEditableContact] = useState<Contact>(contact)
 
   const dispatch = useDispatch<AppDispatch>()
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setEditableContact({ ...editableContact, [name]: value })
   }
@@ -41,27 +49,29 @@ const ContactCard = ({ contact }: { contact: any }) => {
   }
 
   return (
-    <Card>
+    <>
       {isEditing ? (
-        <>
-          <input
-            type="text"
-            name="name"
-            value={editableContact.name}
-            onChange={handleInputChange}
-          />
-          <input
-            type="text"
-            name="phone"
-            value={editableContact.phone}
-            onChange={handleInputChange}
-          />
-          <input
-            type="email"
-            name="email"
-            value={editableContact.email}
-            onChange={handleInputChange}
-          />
+        <CardEdit>
+          <Info>
+            <NameInput
+              type="text"
+              name="name"
+              value={editableContact.name}
+              onChange={handleInputChange}
+            />
+            <PhoneInput
+              type="text"
+              name="phone"
+              value={editableContact.phone}
+              onChange={handleInputChange}
+            />
+            <EmailInput
+              type="email"
+              name="email"
+              value={editableContact.email}
+              onChange={handleInputChange}
+            />
+          </Info>
           <Buttons>
             <ConfirmBtn onClick={handleSave}>
               <img src={confirmImg} alt="Confirm" />
@@ -70,22 +80,22 @@ const ContactCard = ({ contact }: { contact: any }) => {
               <img src={cancelImg} alt="Cancel" />
             </CancelBtn>
           </Buttons>
-        </>
+        </CardEdit>
       ) : (
-        <>
+        <Card>
           <Info>
             <Name>{contact.name}</Name>
-            <Phone>{contact.phone}</Phone>
-            <Email>{contact.email}</Email>
+            <Phone>Phone: {contact.phone}</Phone>
+            <Email>E-mail: {contact.email}</Email>
           </Info>
           <Buttons>
             <EditBtn onClick={() => setIsEditing(true)}>
               <img src={editImg} alt="Edit" />
             </EditBtn>
           </Buttons>
-        </>
+        </Card>
       )}
-    </Card>
+    </>
   )
 }
 
