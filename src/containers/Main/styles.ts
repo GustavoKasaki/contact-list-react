@@ -4,8 +4,8 @@ export const MainContainer = styled.div`
   background-color: #c0c0c0;
   border-radius: 16px;
   box-shadow: 6px 6px 6px rgba(0, 0, 0, 25%);
-  margin-top: 32px;
-  padding-top: 24px;
+  margin: 32px 0;
+  padding: 24px 32px;
 `
 
 export const Counter = styled.h2`
@@ -30,4 +30,5 @@ export const ContactList = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
+  margin-top: 24px;
 `
