@@ -2,7 +2,7 @@ import confirmImg from '../../assets/icons/confirm.svg'
 import { Circle } from './styles'
 
 const ConfirmBtn = () => (
-  <Circle href="/">
+  <Circle>
     <img src={confirmImg} alt="Confirm" />
   </Circle>
 )

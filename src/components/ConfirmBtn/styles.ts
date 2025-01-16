@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Circle = styled.a`
+export const Circle = styled.button`
   background-color: #6bf178;
   height: 36px;
   width: 36px;
