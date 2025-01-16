@@ -49,3 +49,7 @@ export const Email = styled.div`
     overflow-x: clip;
   }
 `
+
+export const Buttons = styled.div`
+  display: flex;
+`

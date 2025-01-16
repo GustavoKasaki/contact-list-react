@@ -1,7 +1,7 @@
 import CancelBtn from '../CancelBtn'
 import ConfirmBtn from '../ConfirmBtn'
 import EditBtn from '../EditBtn'
-import { Card, ContactName, Email, Info, Phone } from './styles'
+import { Buttons, Card, ContactName, Email, Info, Phone } from './styles'
 
 const Contact = () => (
   <Card>
@@ -16,11 +16,11 @@ const Contact = () => (
         <p>john_doe_this_is_a_very_long_email@e-mail.com</p>
       </Email>
     </Info>
-    <div>
+    <Buttons>
       <EditBtn />
       <ConfirmBtn />
       <CancelBtn />
-    </div>
+    </Buttons>
   </Card>
 )
 
