@@ -1,9 +1,10 @@
 import styled from 'styled-components'
+import _var from '../../styles/var'
 
 export const Footer = styled.footer`
   text-align: center;
   font-weight: bold;
-  background-color: #ff6700;
+  background-color: ${_var.orange};
   margin: 32px 0;
   padding: 12px 0;
   // height: 100px;

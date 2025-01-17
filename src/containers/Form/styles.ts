@@ -1,4 +1,5 @@
 import { styled } from 'styled-components'
+import _var from '../../styles/var'
 
 export const Title = styled.h2`
   margin-bottom: 16px;
@@ -42,8 +43,8 @@ export const EmailInput = styled.input`
   font-size: 18px;
   width: 100%;
   border: none;
-  border-left: 2px solid #3a6ea5;
-  border-bottom: 2px solid #3a6ea5;
+  border-left: 2px solid ${_var.lightblue};
+  border-bottom: 2px solid ${_var.lightblue};
   background-color: #fffa;
   color: #000;
 `
@@ -51,7 +52,7 @@ export const EmailInput = styled.input`
 export const Button = styled.button`
   font-size: 18px;
   color: #fff;
-  background-color: #004e98;
+  background-color: ${_var.darkblue};
   width: 120px;
   height: 36px;
   border-radius: 8px;

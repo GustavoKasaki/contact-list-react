@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import _var from '../../styles/var'
 
 export const Header = styled.header`
   display: flex;
   justify-content: space-between;
-  background-color: #ff6700;
+  background-color: ${_var.orange};
   margin-top: 32px;
   height: 160px;
   border-radius: 16px;
@@ -22,7 +23,7 @@ export const AddButton = styled(Link)`
   font-size: 24px;
   line-height: 48px;
   color: #fff;
-  background-color: #004e98;
+  background-color: ${_var.darkblue};
   width: 210px;
   height: 48px;
   border-radius: 8px;

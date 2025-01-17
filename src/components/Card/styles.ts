@@ -1,13 +1,14 @@
 import styled from 'styled-components'
+import _var from '../../styles/var'
 
 export const Card = styled.li`
-  background-color: #004e98;
+  background-color: ${_var.darkblue};
   border-radius: 16px;
   box-shadow: 6px 6px 6px rgba(0, 0, 0, 25%);
   height: 160px;
 `
 export const CardEdit = styled.li`
-  background-color: #3a6ea5;
+  background-color: ${_var.lightblue};
   border-radius: 16px;
   box-shadow: 6px 6px 6px rgba(0, 0, 0, 25%);
   height: 160px;
@@ -47,7 +48,7 @@ export const NameInput = styled.input`
   border: none;
   border-left: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  background-color: #3a6ea5;
+  background-color: ${_var.lightblue};
   color: #000;
 `
 
@@ -61,7 +62,7 @@ export const PhoneInput = styled.input`
   border: none;
   border-left: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  background-color: #3a6ea5;
+  background-color: ${_var.lightblue};
   color: #000;
 `
 
@@ -73,7 +74,7 @@ export const EmailInput = styled.input`
   border: none;
   border-left: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  background-color: #3a6ea5;
+  background-color: ${_var.lightblue};
   color: #000;
 `
 
@@ -83,7 +84,7 @@ export const Buttons = styled.div`
 `
 
 export const CancelBtn = styled.button`
-  background-color: #ff5964;
+  background-color: ${_var.red};
   height: 36px;
   width: 36px;
   border-radius: 50%;
@@ -108,7 +109,7 @@ export const CancelBtn = styled.button`
 `
 
 export const ConfirmBtn = styled.button`
-  background-color: #6bf178;
+  background-color: ${_var.green};
   height: 36px;
   width: 36px;
   border-radius: 50%;
@@ -132,7 +133,7 @@ export const ConfirmBtn = styled.button`
 `
 
 export const EditBtn = styled.a`
-  background-color: #ff6700;
+  background-color: ${_var.orange};
   height: 36px;
   width: 36px;
   border-radius: 50%;
@@ -157,7 +158,7 @@ export const EditBtn = styled.a`
 `
 
 export const DeleteBtn = styled.a`
-  background-color: #c0c0c0;
+  background-color: ${_var.gray};
   height: 36px;
   width: 36px;
   border-radius: 50%;
