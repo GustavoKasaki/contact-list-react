@@ -141,9 +141,33 @@ export const EditBtn = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  margin-top: 10px;
   cursor: pointer;
+  margin-right: 16px;
+  margin-top: 10px;
+
+  &:hover {
+    filter: brightness(1.5);
+    transition: filter 0.25s linear;
+  }
+
+  img {
+    height: 24px;
+    width: 24px;
+  }
+`
+
+export const DeleteBtn = styled.a`
+  background-color: #c0c0c0;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 10px;
 
   &:hover {
     filter: brightness(1.5);
