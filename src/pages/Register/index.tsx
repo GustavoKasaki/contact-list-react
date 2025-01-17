@@ -1,3 +1,4 @@
+import FooterContainer from '../../containers/Footer'
 import Form from '../../containers/Form'
 import HeaderContainer from '../../containers/Header'
 
@@ -6,6 +7,7 @@ const Register = () => {
     <>
       <HeaderContainer isRegistering />
       <Form />
+      <FooterContainer />
     </>
   )
 }
