@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 
 import {
   Contact,
-  removeContact,
+  deleteContact,
   updateContact
 } from '../../store/reducers/contacts'
 import { AppDispatch } from '../../store/store'
@@ -41,7 +41,7 @@ const ContactCard: React.FC<ContactCardProps> = ({ contact }) => {
   }
 
   const handleDelete = () => {
-    dispatch(removeContact(contact.id))
+    dispatch(deleteContact(contact.id))
   }
 
   return (

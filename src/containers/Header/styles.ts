@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const Header = styled.header`
@@ -17,8 +18,9 @@ export const HeaderTitle = styled.h1`
   margin: auto 0 auto 38px;
 `
 
-export const AddButton = styled.button`
+export const AddButton = styled(Link)`
   font-size: 24px;
+  line-height: 48px;
   color: #fff;
   background-color: #004e98;
   width: 210px;
@@ -26,6 +28,7 @@ export const AddButton = styled.button`
   border-radius: 8px;
   margin: auto 38px auto 0;
   cursor: pointer;
+  text-align: center;
 
   &:hover {
     filter: brightness(1.5);

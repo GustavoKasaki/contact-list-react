@@ -14,6 +14,30 @@ const initialState: Contact[] = [
     name: 'Jane Smith',
     phone: '987-654-3210',
     email: 'jane@example.com'
+  },
+  {
+    id: 3,
+    name: 'Jane Smith',
+    phone: '987-654-3210',
+    email: 'jane@example.com'
+  },
+  {
+    id: 4,
+    name: 'Jack Saw',
+    phone: '987-654-3210',
+    email: 'jsaw@example.com'
+  },
+  {
+    id: 5,
+    name: 'Lara Miller',
+    phone: '987-654-3210',
+    email: 'lmiller@example.com'
+  },
+  {
+    id: 6,
+    name: 'Tobias Allen',
+    phone: '987-654-3210',
+    email: 't.allen@example.com'
   }
 ]
 
@@ -29,10 +53,10 @@ const contactsSlice = createSlice({
         state[index] = action.payload
       }
     },
-    removeContact: (state, action: PayloadAction<number>) => {
+    deleteContact: (state, action: PayloadAction<number>) => {
       return state.filter((contact) => contact.id !== action.payload)
     },
-    addNewContact: (state, action: PayloadAction<Contact>) => {
+    addNewContact: (state, action: PayloadAction<Omit<Contact, 'id'>>) => {
       const contactExists = state.find(
         (contact) =>
           contact.name.toLowerCase() === action.payload.name.toLowerCase()
@@ -53,6 +77,6 @@ const contactsSlice = createSlice({
   }
 })
 
-export const { updateContact, removeContact, addNewContact } =
+export const { updateContact, deleteContact, addNewContact } =
   contactsSlice.actions
 export default contactsSlice.reducer
