@@ -3,6 +3,8 @@
 ## **Description**
 This project is a **Contact List** application developed using React and Redux as part of my **full-stack development learning path**. It helps users organize their contact's info with an intuitive and responsive interface.
 
+![image](https://github.com/user-attachments/assets/30ac8d34-6144-4f13-9f27-ca6035996106)
+
 ## **Main Features**
 - Add new contacts
 - Delete contacts
